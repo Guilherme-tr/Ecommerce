@@ -1,0 +1,17 @@
+<div>
+    <h3>{{produtoParaExibir.name | uppercase}}</h3>
+    <ul>
+        <li>Preço: {{produtoParaExibir.price | currency}}</li>
+        <li>Estoque: {{produtoParaExibir.qtde}}</li>
+    </ul>
+    <hr>
+    <label>Digite o nome do produto:
+        <input type="text" [(ngModel)]="produtoParaExibir.name" placeholder="Digite o nome do produto">
+    </label>
+    <label>Digite o preço do produto:
+        <input type="number" [(ngModel)]="produtoParaExibir.price" placeholder="Digite o preço do produto">
+    </label>
+    <label>Digite a quatidade do produto:
+        <input type="number" [(ngModel)]="produtoParaExibir.qtde" placeholder="Digite a quatidade do produto">
+    </label>
+</div>

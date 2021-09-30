@@ -1,0 +1,12 @@
+<h2>Lista de produtos cadastrados</h2>
+<ul>
+    <li *ngFor="let prod of listaProdutos" (click)="exibir(prod)">
+        <b>{{prod.name}}</b>, {{prod.price | currency: 'BRL'}} -
+        <ng-container *ngIf="prod.qtde > 0">Disponivel</ng-container>
+        <i *ngIf="prod.qtde <= 0">Indisponivel</i>
+    </li>
+</ul>
+
+<ng-container *ngIf="produtoSelecionado">
+    <app-produto [produtoParaExibir]="produtoSelecionado"></app-produto>
+</ng-container>
