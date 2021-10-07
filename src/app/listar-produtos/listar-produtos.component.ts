@@ -23,8 +23,4 @@ export class ListarProdutosComponent implements OnInit {
     this.listaProdutos = this.service.getProdutos();
   }
 
-  exibir(produto: Produto): void {
-    this.produtoSelecionado = produto;
-  }
-
 }
